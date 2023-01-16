@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <center>
+        <title>ALL POSTS</title>
+    </center>
+</head>
+
+<body style="background: url(https://img.freepik.com/free-photo/perspective-exterior-nobody-empty-box_1258-260.jpg?w=2000); background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
+    <center>
+            <div>
+                <form action="/viewallposts" method="post">
+                    <table>
+                        <tr>
+                            <h1 style="font-size: 50px;"><u>ALL POSTS</h1></u>
+                        </tr>
+                        {% for i in x %}
+                            <tr>
+                                <td style="border-style: outset;border-width: 2px;border-color: rgba(23, 24, 23, 0.925);font-weight: bold;">
+                                    AUTHOR
+                                </td>
+                                <td style="border-style: outset;border-width: 2px;border-color: rgba(23, 24, 23, 0.925);font-size:17px;font-family: 'Times New Roman', Times, serif;">{{i[0]}}</td>
+
+                            </tr>
+                            <tr>
+                                <td style="border-style: outset;border-width: 2px;border-color: rgba(23, 24, 23, 0.925);font-size: 17px;font-weight:bold;">BLOG NAME</td>
+                                <td style="border-style: outset;border-width: 2px;border-color: rgba(23, 24, 23, 0.925);font-size: 17px;font-family: 'Times New Roman', Times, serif;">{{i[1]}}</td>
+                            </tr>
+
+                            <tr>
+                                <td style="border-style: outset;border-width: 2px;border-color: rgba(23, 24, 23, 0.925);text-align: center;font-size: 17px;font-weight:bold;">BLOG</td>
+                                <td style="height: 150px;vertical-align: top; width: 2000px; border-style: outset;border-width: 2px;border-color: rgba(23, 24, 23, 0.925);font-size: 17px;font-family: 'Times New Roman', Times, serif;">{{i[2]}}</td>
+                            </tr>
+                            <tr>
+                                <td><br><br></td>
+                            </tr>
+                        {% endfor %}
+
+                    </table>
+                </form>
+            </div>
+
+    </center>
+
+</body>
+
+</html>
